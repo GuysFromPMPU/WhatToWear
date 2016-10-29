@@ -1,4 +1,4 @@
-﻿namespace WeatherApp
+﻿namespace WhatToWear.Weather
 {
     public class Weather
     {

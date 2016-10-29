@@ -43,6 +43,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Weather\Constants.cs" />
+    <Compile Include="Weather\Core.cs" />
     <Compile Include="Weather\DataService.cs" />
     <Compile Include="Weather\Weather.cs" />
   </ItemGroup>

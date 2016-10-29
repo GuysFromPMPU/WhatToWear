@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using WhatToWear.Weather;
 using Xamarin.Forms;
 
 namespace WhatToWear
@@ -11,7 +11,8 @@ namespace WhatToWear
   {
     public App()
     {
-      InitializeComponent();
+            Core.GetWeather();
+            InitializeComponent();
 
       MainPage = new WhatToWear.MainPage();
     }
