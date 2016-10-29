@@ -22,6 +22,8 @@ namespace WhatToWear.Weather
                 weather.Wind = (string)results["wind"]["speed"] + " mph";
                 weather.Humidity = (string)results["main"]["humidity"] + " %";
                 weather.Visibility = (string)results["weather"][0]["main"];
+                weather.Icon = (string) results["weather"][0]["icon"];
+                weather.DisplayIcon = "http://openweathermap.org/img/w/" + weather.Icon + ".png";
 
                 DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
                 DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);

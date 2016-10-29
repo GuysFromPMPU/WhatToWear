@@ -6,14 +6,16 @@
 
   <Grid>
     <Grid.RowDefinitions>
-      <RowDefinition Height="*" />
+      <RowDefinition Height="40" />
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*"/>
       <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
-    <Label Text = "{Binding Temperature}" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
-    <Label Text = "{Binding Humidity}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
+    <Label Text = "{Binding Temperature}" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+    <Image HeightRequest="40" WidthRequest="40" Source="{Binding DisplayIcon}" Grid.Row="0" Grid.Column="1"/>
+    <Label Text = "{Binding Humidity}" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
   </Grid>
 
 </ContentPage>

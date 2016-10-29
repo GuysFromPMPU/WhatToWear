@@ -19,7 +19,7 @@ namespace WhatToWear
 
         public async void ShowWeather()
         {
-            var weather = await Core.GetWeather();
+            var weather = await Core.GetWeather("Florida", "us");
             if (weather != null)
             {
                 BindingContext = weather;

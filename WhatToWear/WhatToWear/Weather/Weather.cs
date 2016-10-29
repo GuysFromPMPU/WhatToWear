@@ -9,6 +9,8 @@
         public string Visibility { get; set; }
         public string Sunrise { get; set; }
         public string Sunset { get; set; }
+        public string Icon { get; set; }
+        public string DisplayIcon { get; set; }
 
         public Weather()
         {
@@ -21,6 +23,7 @@
             this.Visibility = " ";
             this.Sunrise = " ";
             this.Sunset = " ";
+            this.Icon = " ";
         }
     }
 }
