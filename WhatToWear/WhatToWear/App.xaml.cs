@@ -7,29 +7,28 @@ using Xamarin.Forms;
 
 namespace WhatToWear
 {
-  public partial class App : Application
-  {
-    public App()
+    public partial class App : Application
     {
-            Core.GetWeather();
+        public App()
+        {
             InitializeComponent();
 
-      MainPage = new WhatToWear.MainPage();
-    }
+            MainPage = new NavigationPage(new WhatToWear.MainPage());
+        }
 
-    protected override void OnStart()
-    {
-      // Handle when your app starts
-    }
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-    protected override void OnSleep()
-    {
-      // Handle when your app sleeps
-    }
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
 
-    protected override void OnResume()
-    {
-      // Handle when your app resumes
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
     }
-  }
 }

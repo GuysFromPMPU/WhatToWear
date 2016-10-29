@@ -4,8 +4,16 @@
              xmlns:local="clr-namespace:WhatToWear"
              x:Class="WhatToWear.MainPage">
 
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Label Text = "{Binding Temperature}" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
+    <Label Text = "{Binding Humidity}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
+  </Grid>
 
 </ContentPage>
