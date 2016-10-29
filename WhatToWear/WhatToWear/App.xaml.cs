@@ -13,7 +13,7 @@ namespace WhatToWear
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new WhatToWear.MainPage());
+            MainPage = new WhatToWear.MainPage();
         }
 
         protected override void OnStart()
