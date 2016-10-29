@@ -16,8 +16,6 @@ namespace WhatToWear
       InitializeComponent();
       var embeddedImage = new Image { Aspect = Aspect.AspectFit };
       embeddedImage.Source = ImageSource.FromResource("Resources.Background.png");
-      BackgroundImage = "Resources.Background.png";
-      Settings.Image = "settings.png";
       //Title = "Saint-Petersburg";
       ShowWeather();
     }

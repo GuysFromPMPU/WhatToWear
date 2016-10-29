@@ -18,12 +18,12 @@
       <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
     <Image Source="{local:ImageResource WhatToWear.Resources.Background.png}" Aspect="AspectFill" Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Row="0" Grid.Column="0"/>
-    <Button x:Name="Settings" Grid.Row ="0" Grid.Column="0" HorizontalOptions ="Center" VerticalOptions ="Center"/>
+    <Image Source="{local:ImageResource WhatToWear.Resources.settings.png}" x:Name="Settings" Grid.Row ="0" Grid.Column="0" HorizontalOptions ="Center" VerticalOptions ="Center" />
     
-    <Label Text ="Saint-Petersburg" Grid.Row ="0" Grid.ColumnSpan="2" Grid.Column="1" HorizontalOptions ="Center" VerticalOptions ="Center"/>
-    <Label Text = "{Binding Temperature}" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+    <Label Text ="Saint-Petersburg" FontAttributes="Bold" FontSize="25" TextColor="Orange" Grid.Row ="0" Grid.ColumnSpan="2" Grid.Column="1" HorizontalOptions ="Center" VerticalOptions ="Center"/>
+    <Label Text = "{Binding Temperature}"  FontAttributes="Bold" FontSize="25" TextColor="Orange" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
     <Image HeightRequest="40" WidthRequest="40" Source="{Binding DisplayIcon}" Grid.Row="1" Grid.Column="1"/>
-    <Label Text = "{Binding Humidity}" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+    <Label Text = "{Binding Humidity}" FontAttributes="Bold" FontSize="25" TextColor="Orange" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
   </Grid>
 
 </ContentPage>
