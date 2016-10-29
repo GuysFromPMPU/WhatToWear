@@ -6,10 +6,10 @@ namespace WhatToWear.Weather
 {
     public class Core
     {
-        public static async Task<Weather> GetWeather(string city = "Saint Petersburg", string country = "ru")
+        public static async Task<Weather> GetWeather(string city = "Saint Petersburg", string country = "ru", string format = "metric")
         {
             string queryString = "http://api.openweathermap.org/data/2.5/weather?q="
-                + city + ',' + country + "&appid=" + Constants.Key;
+                + city + ',' + country + "&units=" + format +"&appid=" + Constants.Key;
 
             var results = await DataService.getDataFromService(queryString).ConfigureAwait(false);
 
@@ -18,7 +18,19 @@ namespace WhatToWear.Weather
                 Debug.WriteLine(results["weather"]);
                 Weather weather = new Weather();
                 weather.Title = (string)results["name"];
-                weather.Temperature = (string)results["main"]["temp"] + " F";
+                weather.Temperature = (string) results["main"]["temp"];
+                switch (format)
+                {
+                    case "metric":
+                        weather.Temperature += " C";
+                        break;
+                    case "imperial":
+                        weather.Temperature += " F";
+                        break;
+                    default:
+                        weather.Temperature += " K";
+                        break;
+                }
                 weather.Wind = (string)results["wind"]["speed"] + " mph";
                 weather.Humidity = (string)results["main"]["humidity"] + " %";
                 weather.Visibility = (string)results["weather"][0]["main"];
