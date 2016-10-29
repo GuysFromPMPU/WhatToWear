@@ -14,15 +14,12 @@ namespace WhatToWear
     public MainPage()
     {
       InitializeComponent();
-      var embeddedImage = new Image { Aspect = Aspect.AspectFit };
-      embeddedImage.Source = ImageSource.FromResource("Resources.Background.png");
-      //Title = "Saint-Petersburg";
       ShowWeather();
     }
 
     public async void ShowWeather()
     {
-      var weather = await Core.GetWeather("Florida", "us");
+      var weather = await Core.GetWeather();
       if (weather != null)
       {
         BindingContext = weather;

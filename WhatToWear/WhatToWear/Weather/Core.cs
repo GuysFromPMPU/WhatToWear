@@ -44,10 +44,7 @@ namespace WhatToWear.Weather
                 weather.Sunset = sunset.ToString() + " UTC";
                 return weather;
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
     }
 }
