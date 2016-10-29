@@ -15,15 +15,9 @@ namespace WhatToWear.Weather
             if (response != null)
             {
                 string json = response.Content.ReadAsStringAsync().Result;
-
                 data = (JContainer)JsonConvert.DeserializeObject(json);
-
             }
-
-
-
             return data;
-
         }
     }
 }
