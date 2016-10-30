@@ -302,6 +302,22 @@
     <EmbeddedResource Include="Resources\footwear\warm-boots.white.png" />
     <EmbeddedResource Include="Resources\footwear\warm-boots.yellow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\other\gloves.black.png" />
+    <EmbeddedResource Include="Resources\other\gloves.blue.png" />
+    <EmbeddedResource Include="Resources\other\gloves.brown.png" />
+    <EmbeddedResource Include="Resources\other\gloves.green.png" />
+    <EmbeddedResource Include="Resources\other\gloves.red.png" />
+    <EmbeddedResource Include="Resources\other\gloves.white.png" />
+    <EmbeddedResource Include="Resources\other\gloves.yellow.png" />
+    <EmbeddedResource Include="Resources\other\umbrella.black.png" />
+    <EmbeddedResource Include="Resources\other\umbrella.blue.png" />
+    <EmbeddedResource Include="Resources\other\umbrella.brown.png" />
+    <EmbeddedResource Include="Resources\other\umbrella.green.png" />
+    <EmbeddedResource Include="Resources\other\umbrella.red.png" />
+    <EmbeddedResource Include="Resources\other\umbrella.white.png" />
+    <EmbeddedResource Include="Resources\other\umbrella.yellow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.163-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.163-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

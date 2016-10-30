@@ -40,6 +40,9 @@ namespace WhatToWear.Data
                 new Clothes {Type = "footwear", Name = "Shoes", Gender = "male", MinTemp = 0, MaxTemp = 100},
                 new Clothes {Type = "footwear", Name = "Sneakers", Gender = "unisex", MinTemp = -10, MaxTemp = 100},
                 new Clothes {Type = "footwear", Name = "Warm boots", Gender = "unisex", MinTemp = -100, MaxTemp = 10},
+
+                new Clothes {Type = "other", Name = "Gloves", Gender = "unisex", MinTemp = -100, MaxTemp = 7},
+                new Clothes {Type = "other", Name = "Umbrella", Gender = "unisex", MinTemp = -100, MaxTemp = 100}
             };
 
             foreach (var clothes in clothesList)
