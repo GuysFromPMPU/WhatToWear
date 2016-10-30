@@ -9,31 +9,32 @@ using Xamarin.Forms;
 
 namespace WhatToWear
 {
-    public partial class App : Application
+  public partial class App : Application
+  {
+    public static ClothesDatabase database = new ClothesDatabase();
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
-            ClothesDatabase database = new ClothesDatabase();
-            var clothes = database.GetClothes();
-            Debug.WriteLine(clothes.FirstOrDefault().Name);
-            Debug.WriteLine(clothes.Count());
-            MainPage = new NavigationPage(new WhatToWear.MainPage());
-        }
+      InitializeComponent();
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
+      var clothes = database.GetClothes();
+      Debug.WriteLine(clothes.FirstOrDefault().Name);
+      Debug.WriteLine(clothes.Count());
+      MainPage = new NavigationPage(new WhatToWear.MainPage());
     }
+
+    protected override void OnStart()
+    {
+      // Handle when your app starts
+    }
+
+    protected override void OnSleep()
+    {
+      // Handle when your app sleeps
+    }
+
+    protected override void OnResume()
+    {
+      // Handle when your app resumes
+    }
+  }
 }
