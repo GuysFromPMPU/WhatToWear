@@ -14,14 +14,18 @@ namespace WhatToWear.Droid
   {
     protected override void OnCreate(Bundle bundle)
     {
+     
       TabLayoutResource = Resource.Layout.Tabbar;
       ToolbarResource = Resource.Layout.Toolbar;
 
       base.OnCreate(bundle);
-
+ 
       global::Xamarin.Forms.Forms.Init(this, bundle);
+        Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
       LoadApplication(new App());
     }
+
+ 
   }
 }
 

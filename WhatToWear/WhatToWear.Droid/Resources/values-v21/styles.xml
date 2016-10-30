@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <!-- Inherit from the light Material Theme -->
+  <style name="MyCustomTheme" parent="android:Theme.Material.Light">
+    <!-- Customizations go here -->
+    <item name ="android:windowTranslucentStatus">true</item>
+    <item name="android:statusBarColor">@color/transparent</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+  </style>
+  <style name="FullScreenTheme" parent="MyCustomTheme">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:statusBarColor">@color/transparent</item>
+    <item name="android:windowTranslucentNavigation">true</item>
+  </style>
+</resources>

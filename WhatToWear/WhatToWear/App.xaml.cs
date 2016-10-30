@@ -18,7 +18,7 @@ namespace WhatToWear
             var clothes = database.GetClothes();
             Debug.WriteLine(clothes.FirstOrDefault().Name);
             Debug.WriteLine(clothes.Count());
-            MainPage = new WhatToWear.MainPage();
+            MainPage = new NavigationPage(new WhatToWear.MainPage());
         }
 
         protected override void OnStart()

@@ -13,7 +13,9 @@ namespace WhatToWear
   {
     public MainPage()
     {
+      NavigationPage.SetHasNavigationBar(this, false);
       InitializeComponent();
+      BackgroundImage = "Background.png";
       ShowWeather();
     }
 
@@ -25,8 +27,13 @@ namespace WhatToWear
         BindingContext = weather;
       }
     }
-  }
 
+    private async void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
+    {
+     await Navigation.PushModalAsync(new Settings());
+    }
+
+  }
 
   [ContentProperty("Source")]
   public class ImageResourceExtension : IMarkupExtension
