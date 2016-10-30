@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace WhatToWear.Data
 {
-    partial class ClothesDatabase
+  partial class ClothesDatabase
+  {
+    public void SetupDatabase()
     {
-        public void SetupDatabase()
-        {
-            //Name.Replace(" ", "-").ToLower() + color + ".png";
-            var clothesList = new List<Clothes>
+      //Name.Replace(" ", "-").ToLower() + color + ".png";
+      var clothesList = new List<Clothes>
             {
                 new Clothes {Type = "headwear", Name = "Wool hat", Gender = "unisex", MinTemp = -100, MaxTemp = 10},
                 new Clothes {Type = "headwear", Name = "Big hat", Gender = "male", MinTemp = 0, MaxTemp = 100},
@@ -45,11 +45,19 @@ namespace WhatToWear.Data
                 new Clothes {Type = "other", Name = "Umbrella", Gender = "unisex", MinTemp = -100, MaxTemp = 100}
             };
 
-            foreach (var clothes in clothesList)
-            {
-                clothes.Color = "black";
-                AddClothes(clothes);
-            }
-        }
+      foreach (var clothes in clothesList)
+      {
+        clothes.Color = "black";
+        AddClothes(clothes);
+        clothes.Color = "red";
+        AddClothes(clothes);
+        clothes.Color = "green";
+        AddClothes(clothes);
+        clothes.Color = "blue";
+        AddClothes(clothes);
+        clothes.Color = "yellow";
+        AddClothes(clothes);
+      }
     }
+  }
 }

@@ -16,11 +16,9 @@ namespace WhatToWear
     public MainPage()
     {
       NavigationPage.SetHasNavigationBar(this, false);
-      ShowWeather();
+      
       InitializeComponent();
-      BackgroundImage = "Background.png";
-     
-
+      ShowWeather();
     }
     public static List<Clothes> list1 = new List<Clothes>();
     public static List<Clothes> list2 = new List<Clothes>();
@@ -33,27 +31,36 @@ namespace WhatToWear
       Random rand = new Random();
       var currentclothe = list1[rand.Next(list1.Count)];
       Debug.WriteLine(currentclothe.Name);
-      Image1.Source = ImageSource.FromResource("Resources.headwear."+ currentclothe.Name.Replace(" ", "-").ToLower()+"."+currentclothe.Color+".png");
-      Debug.WriteLine(rand.Next(list2.Count));
+      Image1.Source = ImageSource.FromResource("WhatToWear.Resources."+currentclothe.Type + "."+ currentclothe.Name.Replace(" ", "-").ToLower()+"."+currentclothe.Color+".png");
+      Debug.WriteLine("Resources.headwear." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
       currentclothe = list2[rand.Next(list2.Count)];
       Debug.WriteLine(currentclothe.Name);
-      Image2.Source = ImageSource.FromResource("Resources.headwear." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
+      Image2.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
 
       currentclothe = list3[rand.Next(list3.Count)];
       Debug.WriteLine(currentclothe.Name);
-      Image3.Source = ImageSource.FromResource("Resources.headwear." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
+      Image3.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
 
       currentclothe = list4[rand.Next(list4.Count)];
       Debug.WriteLine(currentclothe.Name);
-      Image4.Source = ImageSource.FromResource("Resources.headwear." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
+      Image4.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
 
       currentclothe = list5[rand.Next(list5.Count)];
       Debug.WriteLine(currentclothe.Name);
-      Image5.Source = ImageSource.FromResource("Resources.headwear." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
+      Image5.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
     }
     public async void ShowWeather()
     {
       var weather = await Core.GetWeather();
+      switch (weather.Icon)
+      {
+        case "10d":
+          imageBackground.Source = ImageSource.FromResource("WhatToWear.Resources.Images.background_rain.jpg");
+          break;
+        default:
+          imageBackground.Source = ImageSource.FromResource("WhatToWear.Resources.Images.background_sunny.jpg");
+          break;
+      }
       var clothes = WhatToWear.App.database.GetClothes();
       var buffTemperature = weather.Temperature.Remove(weather.Temperature.Length - 2, 2);
       Debug.WriteLine(weather.Temperature);
@@ -93,6 +100,10 @@ namespace WhatToWear
       await Navigation.PushModalAsync(new SettingsPage());
     }
 
+    private void I_Want_More__OnClicked(object sender, EventArgs e)
+    {
+      throw new NotImplementedException();
+    }
   }
 
   [ContentProperty("Source")]

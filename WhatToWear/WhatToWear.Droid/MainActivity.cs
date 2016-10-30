@@ -21,7 +21,6 @@ namespace WhatToWear.Droid
       base.OnCreate(bundle);
  
       global::Xamarin.Forms.Forms.Init(this, bundle);
-        Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
       LoadApplication(new App());
     }
 

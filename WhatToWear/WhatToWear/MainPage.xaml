@@ -18,7 +18,7 @@
       <ColumnDefinition Width="*"/>
       <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
-    <Image Source="{local:ImageResource WhatToWear.Resources.Images.Background.png}" Aspect="AspectFill" Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Row="0" Grid.Column="0"/>
+    <Image x:Name ="imageBackground" Aspect="AspectFill" Grid.ColumnSpan="3" Grid.RowSpan="6" Grid.Row="0" Grid.Column="0"/>
     <Image Source="{local:ImageResource WhatToWear.Resources.Images.settings.png}" x:Name="Settings" Grid.Row ="0" Grid.Column="0" HorizontalOptions ="Center" VerticalOptions ="Center" >
     <Image.GestureRecognizers>
       <TapGestureRecognizer 
@@ -30,13 +30,12 @@
     <Label Text = "{Binding Temperature}"  FontAttributes="Bold" FontSize="25" TextColor="Orange" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
     <Image HeightRequest="40" WidthRequest="40" Source="{Binding DisplayIcon}" Grid.Row="1" Grid.Column="1"/>
     <Label Text = "{Binding Humidity}" FontAttributes="Bold" FontSize="25" TextColor="Orange" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-    <Image x:Name ="Image1" Grid.Column="1" Grid.Row="2"/>
+    <Image x:Name ="Image1" Grid.Column="1" Grid.Row="2" Source="{local:ImageResource Resources.headwear.big-hat.black.png}" HorizontalOptions ="Center" VerticalOptions ="Center"/>
     <Image x:Name ="Image2" Grid.Column="0" Grid.Row="3"/>
 
     <Image x:Name ="Image3" Grid.Column="2" Grid.Row="3"/>
 
     <Image x:Name ="Image4" Grid.Column="1" Grid.Row="4"/>
     <Image x:Name ="Image5" Grid.Column="1" Grid.Row="5"/>
-
   </Grid>
 </ContentPage>

@@ -11,6 +11,7 @@
         public string Sunset { get; set; }
         public string Icon { get; set; }
         public string DisplayIcon { get; set; }
+        public string Main { get; set; }
 
         public Weather()
         {
@@ -24,6 +25,7 @@
             this.Sunrise = " ";
             this.Sunset = " ";
             this.Icon = " ";
+          this.Main = " ";
         }
     }
 }
