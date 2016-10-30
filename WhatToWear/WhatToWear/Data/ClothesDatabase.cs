@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace WhatToWear.Data
 {
-  partial class ClothesDatabase
+  public partial class ClothesDatabase
   {
     private SQLiteConnection _connection;
 

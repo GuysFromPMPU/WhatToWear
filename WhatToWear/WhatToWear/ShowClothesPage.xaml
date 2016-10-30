@@ -2,14 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WhatToWear.ShowClothesPage">
+    
+
   <ListView x:Name="GroupedView"
             IsGroupingEnabled="true"
             GroupDisplayBinding="{ Binding Name }"
             GroupShortNameBinding ="{ Binding ShortName }"
+            IsPullToRefreshEnabled="True"
+            
             >
     <ListView.ItemTemplate>
       <DataTemplate>
-        <TextCell Text="{ Binding Title }" Detail="{ Binding Description }" />
+        <ViewCell x:Name="CellContext">
+          <ViewCell.ContextActions>
+            <MenuItem Clicked="MenuItem_OnClicked" CommandParameter="{Binding .}"
+               Text="More" />
+            <MenuItem Clicked="MenuItem_OnClickedDelete" CommandParameter="{Binding .}"
+               Text="Delete" IsDestructive="True" />
+          </ViewCell.ContextActions>
+          <StackLayout BackgroundColor="#eee"
+                       Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+              <Label Text="{Binding Title}"
+              TextColor="#f35e20" Margin="5" />
+              <Label Text="{Binding Description}"
+              HorizontalOptions="EndAndExpand"
+                     Margin="5"
+              TextColor="#503026" />
+            </StackLayout>
+          </StackLayout>
+        </ViewCell>
         <!-- Or use a ViewCell -->
       </DataTemplate>
     </ListView.ItemTemplate>
