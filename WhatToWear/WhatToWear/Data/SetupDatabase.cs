@@ -11,7 +11,7 @@ namespace WhatToWear.Data
     {
         public void SetupDatabase()
         {
-            //Replace(" ", "-").ToLower();
+            //Name.Replace(" ", "-").ToLower() + color + ".png";
             var clothesList = new List<Clothes>
             {
                 new Clothes {Type = "headwear", Name = "Wool hat", Gender = "unisex", MinTemp = -100, MaxTemp = 5},
@@ -21,7 +21,7 @@ namespace WhatToWear.Data
                 new Clothes {Type = "sweater", Name = "T-shirt", Gender = "unisex", MinTemp = 20, MaxTemp = 100},
                 new Clothes {Type = "sweater", Name = "Short sleeve T-shirt", Gender = "unisex", MinTemp = 20, MaxTemp = 100},
                 new Clothes {Type = "sweater", Name = "Sweater", Gender = "unisex", MinTemp = 15, MaxTemp = 25},
-                new Clothes {Type = "sweater", Name = "Sweater with hood", Gender = "male", MinTemp = 10, MaxTemp = 20},
+                new Clothes {Type = "sweater", Name = "Sweater with hood", Gender = "male", MinTemp = -100, MaxTemp = 20},
                 new Clothes {Type = "sweater", Name = "Shirt with vest", Gender = "male", MinTemp = 10, MaxTemp = 20},
 
                 new Clothes {Type = "jacket", Name = "Warm anorak", Gender = "unisex", MinTemp = -100, MaxTemp = -5},

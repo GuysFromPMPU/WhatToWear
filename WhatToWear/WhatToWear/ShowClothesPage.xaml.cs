@@ -52,11 +52,11 @@ namespace WhatToWear
         if (clotheSingle.Type.Equals("headwear"))
           group.Add(new Item(clotheSingle.Name, clotheSingle.Color));
       }
-      group = new Group("Outerwear", "2");
+      group = new Group("Sweater", "2");
       groupedItems.Add(group);
       foreach (var clotheSingle in clothes)
       {
-        if (clotheSingle.Type.Equals("outerwear"))
+        if (clotheSingle.Type.Equals("sweater"))
           group.Add(new Item(clotheSingle.Name, clotheSingle.Color));
       }
       group = new Group("Jacket", "3");
@@ -66,7 +66,15 @@ namespace WhatToWear
         if (clotheSingle.Type.Equals("jacket"))
           group.Add(new Item(clotheSingle.Name, clotheSingle.Color));
       }
+      
 
+      group = new Group("Pants", "4");
+      groupedItems.Add(group);
+      foreach (var clotheSingle in clothes)
+      {
+        if (clotheSingle.Type.Equals("pants"))
+          group.Add(new Item(clotheSingle.Name, clotheSingle.Color));
+      }
       // Repeat for each item in a group. This builds the second-level collections
 
 

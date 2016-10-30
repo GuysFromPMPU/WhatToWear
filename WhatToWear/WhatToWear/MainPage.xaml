@@ -10,7 +10,8 @@
       <RowDefinition Height ="*"/>
       <RowDefinition Height ="*"/>
       <RowDefinition Height ="*"/>
-      <RowDefinition Height="40" />
+      <RowDefinition Height ="*"/>
+      <RowDefinition Height ="*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*"/>
@@ -29,6 +30,13 @@
     <Label Text = "{Binding Temperature}"  FontAttributes="Bold" FontSize="25" TextColor="Orange" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
     <Image HeightRequest="40" WidthRequest="40" Source="{Binding DisplayIcon}" Grid.Row="1" Grid.Column="1"/>
     <Label Text = "{Binding Humidity}" FontAttributes="Bold" FontSize="25" TextColor="Orange" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-  </Grid>
+    <Image x:Name ="Image1" Grid.Column="1" Grid.Row="2"/>
+    <Image x:Name ="Image2" Grid.Column="0" Grid.Row="3"/>
 
+    <Image x:Name ="Image3" Grid.Column="2" Grid.Row="3"/>
+
+    <Image x:Name ="Image4" Grid.Column="1" Grid.Row="4"/>
+    <Image x:Name ="Image5" Grid.Column="1" Grid.Row="5"/>
+
+  </Grid>
 </ContentPage>
