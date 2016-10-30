@@ -13,10 +13,12 @@ namespace WhatToWear
 {
   public partial class MainPage : ContentPage
   {
+
+
     public MainPage()
     {
       NavigationPage.SetHasNavigationBar(this, false);
-      
+
       InitializeComponent();
       ShowWeather();
     }
@@ -25,13 +27,15 @@ namespace WhatToWear
     public static List<Clothes> list3 = new List<Clothes>();
     public static List<Clothes> list4 = new List<Clothes>();
     public static List<Clothes> list5 = new List<Clothes>();
+    public static List<Clothes> list6 = new List<Clothes>();
+    public static List<Clothes> list7 = new List<Clothes>();
 
     public void randomClothes()
     {
       Random rand = new Random();
       var currentclothe = list1[rand.Next(list1.Count)];
       Debug.WriteLine(currentclothe.Name);
-      Image1.Source = ImageSource.FromResource("WhatToWear.Resources."+currentclothe.Type + "."+ currentclothe.Name.Replace(" ", "-").ToLower()+"."+currentclothe.Color+".png");
+      Image1.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
       Debug.WriteLine("Resources.headwear." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
       currentclothe = list2[rand.Next(list2.Count)];
       Debug.WriteLine(currentclothe.Name);
@@ -48,10 +52,23 @@ namespace WhatToWear
       currentclothe = list5[rand.Next(list5.Count)];
       Debug.WriteLine(currentclothe.Name);
       Image5.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." + currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
+
+      if (list6.Count > 0)
+      {
+        currentclothe = list6[rand.Next(list6.Count)];
+        Image6.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." +
+                                   currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
+      }
+      if (list7.Count > 0)
+      {
+        currentclothe = list7[rand.Next(list7.Count)];
+        Image7.Source = ImageSource.FromResource("WhatToWear.Resources." + currentclothe.Type + "." + 
+          currentclothe.Name.Replace(" ", "-").ToLower() + "." + currentclothe.Color + ".png");
+      }
     }
     public async void ShowWeather()
     {
-      var weather = await Core.GetWeather();
+      var weather = await Core.GetWeather(WhatToWear.App.query);
       switch (weather.Icon)
       {
         case "10d":
@@ -64,17 +81,25 @@ namespace WhatToWear
       var clothes = WhatToWear.App.database.GetClothes();
       var buffTemperature = weather.Temperature.Remove(weather.Temperature.Length - 2, 2);
       Debug.WriteLine(weather.Temperature);
+      var degrees = Convert.ToDouble(buffTemperature);
+      switch (WhatToWear.App.query.Format)
+      {
+        case "imperial":
+          degrees = Convert.ToDouble(degrees - 32) * 5.0 / 9.0;
+          break;
+      }
+      list1.Clear(); list2.Clear(); list3.Clear(); list4.Clear(); list5.Clear(); list6.Clear(); list7.Clear();
       foreach (var clothe in clothes)
       {
-        if (Convert.ToDouble(buffTemperature) >= clothe.MinTemp && Convert.ToDouble(buffTemperature) <= clothe.MaxTemp)
+        if (degrees >= Convert.ToDouble(clothe.MinTemp) && degrees <= Convert.ToDouble(clothe.MaxTemp))
         {
           switch (clothe.Type)
           {
             case "headwear":
-                list1.Add(clothe);
+              list1.Add(clothe);
               break;
             case "sweater":
-                list2.Add(clothe);
+              list2.Add(clothe);
               break;
             case "jacket":
               list3.Add(clothe);
@@ -84,6 +109,17 @@ namespace WhatToWear
               break;
             case "footwear":
               list5.Add(clothe);
+              break;
+            case "other":
+              {
+                if (clothe.Name == "Umbrella")
+                {
+                  if (weather.Icon == "10d")
+                    list6.Add(clothe);
+                }
+                else
+                  list7.Add(clothe);
+              }
               break;
           }
         }
@@ -100,9 +136,10 @@ namespace WhatToWear
       await Navigation.PushModalAsync(new SettingsPage());
     }
 
-    private void I_Want_More__OnClicked(object sender, EventArgs e)
+    private void I_Want_More_OnClicked(object sender, EventArgs e)
     {
-      throw new NotImplementedException();
+      randomClothes();
+      this.ForceLayout();
     }
   }
 

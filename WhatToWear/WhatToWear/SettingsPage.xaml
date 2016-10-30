@@ -3,5 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WhatToWear.SettingsPage"
              Title="Settings">
-  <ListView x:Name="SettingsView" ItemSelected="SettingsView_OnItemSelected" VerticalOptions="Center"/>
+  <ListView x:Name="SettingsView" ItemSelected="SettingsView_OnItemSelected"/>
 </ContentPage>

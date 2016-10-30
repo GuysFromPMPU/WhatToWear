@@ -19,7 +19,8 @@ namespace WhatToWear
       SettingsView.ItemsSource = new string[]
       {
         "Your clothes",
-        "Add clothes"
+        "Add clothes",
+        "Change settings"
       };
     }
 
@@ -34,6 +35,9 @@ namespace WhatToWear
           break;
         case "Add clothes":
           await Navigation.PushModalAsync(new AddClothesPage());
+          break;
+        case "Change settings":
+          await Navigation.PushModalAsync(new AboutPage());
           break;
       }
     }

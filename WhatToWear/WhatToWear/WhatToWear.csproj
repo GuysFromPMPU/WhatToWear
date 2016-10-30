@@ -52,6 +52,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
@@ -205,8 +206,8 @@
     <EmbeddedResource Include="Resources\sweater\sweater-with-hood.yellow.png" />
     <EmbeddedResource Include="Resources\sweater\sweater.black.png" />
     <EmbeddedResource Include="Resources\sweater\sweater.blue.png" />
-    <EmbeddedResource Include="Resources\sweater\Sweater.brown.png" />
-    <EmbeddedResource Include="Resources\sweater\Sweater.green.png" />
+    <EmbeddedResource Include="Resources\sweater\sweater.brown.png" />
+    <EmbeddedResource Include="Resources\sweater\sweater.green.png" />
     <EmbeddedResource Include="Resources\sweater\sweater.red.png" />
     <EmbeddedResource Include="Resources\sweater\sweater.white.png" />
     <EmbeddedResource Include="Resources\sweater\sweater.yellow.png" />

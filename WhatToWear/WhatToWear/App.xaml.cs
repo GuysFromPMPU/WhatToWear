@@ -11,6 +11,8 @@ namespace WhatToWear
 {
   public partial class App : Application
   {
+    public static Query query = new Query();
+
     public static ClothesDatabase database = new ClothesDatabase();
     public App()
     {
