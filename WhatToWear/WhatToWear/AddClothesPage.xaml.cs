@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace WhatToWear
 {
-  public partial class About : ContentPage
+  public partial class AddClothesPage : ContentPage
   {
-    public About()
+    public AddClothesPage()
     {
       InitializeComponent();
     }

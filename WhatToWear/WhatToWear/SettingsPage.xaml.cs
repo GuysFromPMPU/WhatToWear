@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace WhatToWear
 {
-  public partial class Settings : ContentPage
+  public partial class SettingsPage : ContentPage
   {
-    public Settings()
+    public SettingsPage()
     {
       InitializeComponent();
       SettingsView.ItemSelected += (sender, e) => {
@@ -31,13 +31,13 @@ namespace WhatToWear
       switch (item)
       {
         case "Your clothes":
-          await Navigation.PushModalAsync(new ShowClothes());
+          await Navigation.PushModalAsync(new ShowClothesPage());
           break;
         case "Add clothes":
-          await Navigation.PushModalAsync(new AddClothes());
+          await Navigation.PushModalAsync(new AddClothesPage());
           break;
         case "About":
-          await Navigation.PushModalAsync(new About());
+          await Navigation.PushModalAsync(new AboutPage());
           break;
       }
     }

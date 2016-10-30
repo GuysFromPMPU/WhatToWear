@@ -30,7 +30,7 @@ namespace WhatToWear
 
     private async void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
     {
-     await Navigation.PushModalAsync(new Settings());
+     await Navigation.PushModalAsync(new SettingsPage());
     }
 
   }
