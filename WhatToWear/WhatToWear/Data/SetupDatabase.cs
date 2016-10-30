@@ -11,26 +11,31 @@ namespace WhatToWear.Data
     {
         public void SetupDatabase()
         {
+            //Replace(" ", "-").ToLower();
             var clothesList = new List<Clothes>
             {
-                new Clothes {Type = "headwear", Name = "wool-hat", Gender = "unisex", MinTemp = -100, MaxTemp = 5},
-                new Clothes {Type = "headwear", Name = "big-hat", Gender = "male", MinTemp = 5, MaxTemp = 25},
-                new Clothes {Type = "headwear", Name = "woman-hat", Gender = "female", MinTemp = 5, MaxTemp = 30 },
+                new Clothes {Type = "headwear", Name = "Wool hat", Gender = "unisex", MinTemp = -100, MaxTemp = 5},
+                new Clothes {Type = "headwear", Name = "Big hat", Gender = "male", MinTemp = 5, MaxTemp = 25},
+                new Clothes {Type = "headwear", Name = "Woman hat", Gender = "female", MinTemp = 5, MaxTemp = 30 },
 
-                new Clothes {Type = "outerwear", Name = "shirt-2", Gender = "unisex", MinTemp = 20, MaxTemp = 100},
-                new Clothes {Type = "outerwear", Name = "short-sleeve-t-shirt", Gender = "unisex", MinTemp = 20, MaxTemp = 100},
-                new Clothes {Type = "outerwear", Name = "shirt-5", Gender = "unisex", MinTemp = 15, MaxTemp = 100},
-                new Clothes {Type = "outerwear", Name = "sweater-with-hood", Gender = "male", MinTemp = 10, MaxTemp = 20},
-                new Clothes {Type = "outerwear", Name = "shirt-with-vest", Gender = "male", MinTemp = 10, MaxTemp = 25},
+                new Clothes {Type = "sweater", Name = "T-shirt", Gender = "unisex", MinTemp = 20, MaxTemp = 100},
+                new Clothes {Type = "sweater", Name = "Short sleeve T-shirt", Gender = "unisex", MinTemp = 20, MaxTemp = 100},
+                new Clothes {Type = "sweater", Name = "Sweater", Gender = "unisex", MinTemp = 15, MaxTemp = 25},
+                new Clothes {Type = "sweater", Name = "Sweater with hood", Gender = "male", MinTemp = 10, MaxTemp = 20},
+                new Clothes {Type = "sweater", Name = "Shirt with vest", Gender = "male", MinTemp = 10, MaxTemp = 20},
 
-                new Clothes {Type = "jacket", Name = "big-anorak", Gender = "unisex", MinTemp = -100, MaxTemp = -5},
-                new Clothes {Type = "jacket", Name = "jacket", Gender = "unisex", MinTemp = -15, MaxTemp = 15},
-                new Clothes {Type = "jacket", Name = "men-coat", Gender = "male", MinTemp = -5, MaxTemp = 15},
-                new Clothes {Type = "jacket", Name = "men-jacket", Gender = "male", MinTemp = -5, MaxTemp = 15},
-                new Clothes {Type = "jacket", Name = "sport-jacket", Gender = "male", MinTemp = 0, MaxTemp = 20},
-                 new Clothes {Type = "jacket", Name = "parka", Gender = "unisex", MinTemp = -100, MaxTemp = 15},
+                new Clothes {Type = "jacket", Name = "Warm anorak", Gender = "unisex", MinTemp = -100, MaxTemp = -5},
+                new Clothes {Type = "jacket", Name = "Jacket", Gender = "unisex", MinTemp = -15, MaxTemp = 15},
+                new Clothes {Type = "jacket", Name = "Men coat", Gender = "male", MinTemp = -5, MaxTemp = 15},
+                new Clothes {Type = "jacket", Name = "Men jacket", Gender = "male", MinTemp = -5, MaxTemp = 15},
+                new Clothes {Type = "jacket", Name = "Sport jacket", Gender = "male", MinTemp = 0, MaxTemp = 20},
+                new Clothes {Type = "jacket", Name = "Parka", Gender = "unisex", MinTemp = -100, MaxTemp = 15},
 
-
+                new Clothes {Type = "pants", Name = "Shorts with belt", Gender = "male", MinTemp = 20, MaxTemp = 100},
+                new Clothes {Type = "pants", Name = "Shorts", Gender = "male", MinTemp = 20, MaxTemp = 100},
+                new Clothes {Type = "pants", Name = "Jeans", Gender = "unisex", MinTemp = -100, MaxTemp = 25},
+                new Clothes {Type = "pants", Name = "Sweatpants", Gender = "male", MinTemp = -100, MaxTemp = 25},
+                new Clothes {Type = "pants", Name = "Trousers", Gender = "male", MinTemp = -100, MaxTemp = 25},
             };
 
             foreach (var clothes in clothesList)
