@@ -174,6 +174,52 @@
     <EmbeddedResource Include="Resources\outerwear\sweater-with-hood.red.png" />
     <EmbeddedResource Include="Resources\outerwear\sweater-with-hood.yellow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\jacket\big-anorak.black.png" />
+    <EmbeddedResource Include="Resources\jacket\big-anorak.blue.png" />
+    <EmbeddedResource Include="Resources\jacket\big-anorak.brown.png" />
+    <EmbeddedResource Include="Resources\jacket\big-anorak.green.png" />
+    <EmbeddedResource Include="Resources\jacket\big-anorak.red.png" />
+    <EmbeddedResource Include="Resources\jacket\big-anorak.white.png" />
+    <EmbeddedResource Include="Resources\jacket\big-anorak.yellow.png" />
+    <EmbeddedResource Include="Resources\jacket\jacket.black.png" />
+    <EmbeddedResource Include="Resources\jacket\jacket.blue.png" />
+    <EmbeddedResource Include="Resources\jacket\jacket.brown.png" />
+    <EmbeddedResource Include="Resources\jacket\jacket.green.png" />
+    <EmbeddedResource Include="Resources\jacket\jacket.red.png" />
+    <EmbeddedResource Include="Resources\jacket\jacket.white.png" />
+    <EmbeddedResource Include="Resources\jacket\jacket.yellow.png" />
+    <EmbeddedResource Include="Resources\jacket\men-coat.black.png" />
+    <EmbeddedResource Include="Resources\jacket\men-coat.blue.png" />
+    <EmbeddedResource Include="Resources\jacket\men-coat.brown.png" />
+    <EmbeddedResource Include="Resources\jacket\men-coat.green.png" />
+    <EmbeddedResource Include="Resources\jacket\men-coat.red.png" />
+    <EmbeddedResource Include="Resources\jacket\men-coat.white.png" />
+    <EmbeddedResource Include="Resources\jacket\men-coat.yellow.png" />
+    <EmbeddedResource Include="Resources\jacket\men-jacket.black.png" />
+    <EmbeddedResource Include="Resources\jacket\men-jacket.blue.png" />
+    <EmbeddedResource Include="Resources\jacket\men-jacket.brown.png" />
+    <EmbeddedResource Include="Resources\jacket\men-jacket.green.png" />
+    <EmbeddedResource Include="Resources\jacket\men-jacket.red.png" />
+    <EmbeddedResource Include="Resources\jacket\men-jacket.white.png" />
+    <EmbeddedResource Include="Resources\jacket\men-jacket.yellow.png" />
+    <EmbeddedResource Include="Resources\jacket\sport-jacket.black.png" />
+    <EmbeddedResource Include="Resources\jacket\sport-jacket.blue.png" />
+    <EmbeddedResource Include="Resources\jacket\sport-jacket.brown.png" />
+    <EmbeddedResource Include="Resources\jacket\sport-jacket.green.png" />
+    <EmbeddedResource Include="Resources\jacket\sport-jacket.red.png" />
+    <EmbeddedResource Include="Resources\jacket\sport-jacket.white.png" />
+    <EmbeddedResource Include="Resources\jacket\sport-jacket.yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\jacket\parka.black.png" />
+    <EmbeddedResource Include="Resources\jacket\parka.blue.png" />
+    <EmbeddedResource Include="Resources\jacket\parka.brown.png" />
+    <EmbeddedResource Include="Resources\jacket\parka.green.png" />
+    <EmbeddedResource Include="Resources\jacket\parka.red.png" />
+    <EmbeddedResource Include="Resources\jacket\parka.white.png" />
+    <EmbeddedResource Include="Resources\jacket\parka.yellow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.163-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.163-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

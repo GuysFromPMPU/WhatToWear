@@ -21,8 +21,14 @@ namespace WhatToWear.Data
                 new Clothes {Type = "outerwear", Name = "short-sleeve-t-shirt", Gender = "unisex", MinTemp = 20, MaxTemp = 100},
                 new Clothes {Type = "outerwear", Name = "shirt-5", Gender = "unisex", MinTemp = 15, MaxTemp = 100},
                 new Clothes {Type = "outerwear", Name = "sweater-with-hood", Gender = "male", MinTemp = 10, MaxTemp = 20},
-                new Clothes {Type = "outerwear", Name = "shirt-with-vest", Gender = "male", MinTemp = 10, MaxTemp = 25}
+                new Clothes {Type = "outerwear", Name = "shirt-with-vest", Gender = "male", MinTemp = 10, MaxTemp = 25},
 
+                new Clothes {Type = "jacket", Name = "big-anorak", Gender = "unisex", MinTemp = -100, MaxTemp = -5},
+                new Clothes {Type = "jacket", Name = "jacket", Gender = "unisex", MinTemp = -15, MaxTemp = 15},
+                new Clothes {Type = "jacket", Name = "men-coat", Gender = "male", MinTemp = -5, MaxTemp = 15},
+                new Clothes {Type = "jacket", Name = "men-jacket", Gender = "male", MinTemp = -5, MaxTemp = 15},
+                new Clothes {Type = "jacket", Name = "sport-jacket", Gender = "male", MinTemp = 0, MaxTemp = 20},
+                 new Clothes {Type = "jacket", Name = "parka", Gender = "unisex", MinTemp = -100, MaxTemp = 15},
 
 
             };
