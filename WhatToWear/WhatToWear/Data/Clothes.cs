@@ -8,18 +8,19 @@ using Xamarin.Forms;
 
 namespace WhatToWear.Data
 {
-  public class Clothes
-  {
-    [PrimaryKey, AutoIncrement]
-    public int ID { get; set; }
-    public int MinTemp { get; set; }
-    public int MaxTemp { get; set; }
-    public string Type { get; set; }
-    public string Name { get; set; }
-    public string Color { get; set; }
-
-    public Clothes()
+    public class Clothes
     {
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+        public int MinTemp { get; set; }
+        public int MaxTemp { get; set; }
+        public string Type { get; set; }
+        public string Name { get; set; }
+        public string Color { get; set; }
+        public string Gender { get; set; }
+
+        public Clothes()
+        {
+        }
     }
-  }
 }
